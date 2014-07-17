@@ -10,6 +10,6 @@ var mount = st({
 http.createServer(function(req, res) {
   if(mount(req, res)) { return ; }
   res.end('Something is wrong');
-}).listen(1338);
+}).listen(process.env.PORT || 1338);
 
 console.log('Listening on port 1338');
