@@ -1,0 +1,38 @@
+<div class="row-fluid">
+  <div class="col-md-10"><h2>Deposits</h2></div>
+  <div class="col-md-2">
+    <a class="btn btn-primary" href="#/deposit/new">New Deposit</a>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="deposit in deposits">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="col-md-2">
+               <b>Date:</b> {{deposit.value.date | date:"shortDate"}}
+            </div>            
+            <div class="col-md-4">
+               <b>7th Tradition:</b> {{deposit.value.tradition}} <br/>
+               <b>Hospitals & Institution Can:</b> {{deposit.value.can}}
+            </div>
+            <div class="col-md-3">
+              <b>Total: </b> {{deposit.value.total}}
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+              <div class="btn-group pull-right">
+                <a class="btn btn-primary" href="#/deposit/edit/{{deposit.name}}">
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+                <button class="btn btn-danger" ng-click="delete(deposit)">
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

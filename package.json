@@ -1,0 +1,36 @@
+{
+  "name": "treasurerApp",
+  "version": "0.0.1",
+  "description": "Application to keep up with homegroup contributions",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node server",
+    "install": "napa",
+    "build": "browserify -t brfs -e app/app.js -o public/js/app.js && cat node_modules/jquery/jquery.js > public/js/jquery.js && cat node_modules/bootstrap/dist/js/bootstrap.js > public/js/bootstrap.js && cat node_modules/bootstrap/dist/css/bootstrap.css > public/css/bootstrap.css && cp -R node_modules/bootstrap/dist/fonts  public",
+    "watch": "watchify -t brfs -e app/app.js -o public/js/app.js"
+  },
+  "author": "Joel Villahermosa",
+  "license": "ISC",
+  "devDependencies": {
+    "brfs": "^1.1.1",
+    "browserify": "^4.1.10",
+    "napa": "^0.4.1",
+    "watchify": "^0.10.2"
+  },
+  "dependencies": {
+    "st": "^0.5.1",
+    "underscore": "^1.6.0"
+  },
+  "napa": {
+    "angular": "angular/bower-angular#v1.2.19-build.251+sha.24aee81",
+    "bootstrap": "twbs/bootstrap#v3.1.1",
+    "ui-router": "angular-ui/ui-router#0.2.10",
+    "jquery": "components/jquery#2.0.3",
+    "angularFire": "firebase/angularFire#v0.7.1",
+    "firebase": "firebase/firebase-bower#v1.0.17",
+    "moment": "moment/moment#2.7.0",
+    "ui-bootstrap": "angular-ui/bootstrap-bower#0.11.0",
+    "firebase-simple-login": "firebase/firebase-simple-login#v1.6.1"
+  }
+}
