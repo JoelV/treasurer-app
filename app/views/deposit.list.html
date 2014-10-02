@@ -17,11 +17,11 @@
                <b>Date:</b> {{deposit.value.date | date:"shortDate"}}
             </div>            
             <div class="col-md-4">
-               <b>7th Tradition:</b> {{deposit.value.tradition}} <br/>
-               <b>Hospitals & Institution Can:</b> {{deposit.value.can}}
+               <b>7th Tradition:</b> {{deposit.value.tradition | cashify }} <br/>
+               <b>Hospitals & Institution Can:</b> {{deposit.value.can | cashify }}
             </div>
             <div class="col-md-3">
-              <b>Total: </b> {{deposit.value.total}}
+              <b>Total: </b> {{deposit.value.total | cashify }}
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="btn-group pull-right">

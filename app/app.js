@@ -15,4 +15,6 @@ app
   .factory('depositService', require('./services/deposit-service.js'))
   .factory('alertService', require('./services/alert-service.js'))
   .factory('authService', require('./services/auth-service.js'))
-  .value('firebase', { url: 'https://treasurerapp.firebaseio.com' }); 
+  .filter('cashify', require('./filters/cashify.js'))
+  .value('firebase', { url: 'https://treasurerapp.firebaseio.com' });
+

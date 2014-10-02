@@ -8,6 +8,8 @@ module.exports = function($scope, depositService, $stateParams, $state, $moment)
   });
 
   $scope.save= function(deposit) {
+    deposit.can = deposit.can ? deposit.can : 0;
+    deposit.tradition = deposit.tradition ? deposit.can : 0;
     deposit.total = deposit.can + deposit.tradition;
     snapshotData.value = deposit;  
     depositService.update(snapshotData).then(function() {

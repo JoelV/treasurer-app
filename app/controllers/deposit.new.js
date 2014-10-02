@@ -8,6 +8,8 @@ module.exports = function($scope, depositService, $state) {
   };
 
   $scope.save = function(deposit) {
+    deposit.can = deposit.can || '' ? deposit.can : 0;
+    deposit.tradition = deposit.tradition || '' ? deposit.tradition : 0; 
     deposit.total = deposit.can + deposit.tradition;
     depositService.save(deposit).then(function(ref) {
       $scope.addAlert({ type: 'success', msg: 'Successfully created a deposit' });
