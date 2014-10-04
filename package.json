@@ -7,7 +7,7 @@
     "test": "",
     "start": "node server",
     "install": "napa",
-    "build": "browserify -t brfs -e app/app.js -o public/js/app.js && cat node_modules/jquery/jquery.js > public/js/jquery.js && cat node_modules/bootstrap/dist/js/bootstrap.js > public/js/bootstrap.js && cat node_modules/bootstrap/dist/css/bootstrap.css > public/css/bootstrap.css && cp -R node_modules/bootstrap/dist/fonts  public",
+    "build": "browserify -t brfs -e app/app.js -o public/js/app.js && cat node_modules/jquery/jquery.js > public/js/jquery.js && cat node_modules/bootstrap/dist/js/bootstrap.js > public/js/bootstrap.js && cat node_modules/bootstrap/dist/css/bootstrap.css > public/css/bootstrap.css && cp -R node_modules/bootstrap/dist/fonts  public && cat node_modules/bootstrap/dist/css/bootstrap.css.map > public/css/bootstrap.css.map",
     "watch": "watchify -t brfs -e app/app.js -o public/js/app.js"
   },
   "author": "Joel Villahermosa",

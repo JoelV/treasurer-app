@@ -10,7 +10,7 @@
 <div class="row-fluid">
   <div class="col-md-12 col-xs-12">
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="deposit in deposits">
+      <li class="list-group-item" ng-repeat="deposit in deposits | orderBy:'value.date':'reverse'">
         <div class="container-fluid">
           <div class="row-fluid">
             <div class="col-md-2">
